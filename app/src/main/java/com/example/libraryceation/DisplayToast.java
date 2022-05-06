@@ -18,7 +18,7 @@ public class DisplayToast extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         display(DisplayToast.this);
     }
-    public void display(Context c) {
+    public static void display(Context c) {
         Toast.makeText(c,getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
 
     }
