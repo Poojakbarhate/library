@@ -18,8 +18,8 @@ public class DisplayToast extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         display(DisplayToast.this);
     }
-    public static void display(Context c) {
-        Toast.makeText(c,getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
+    public void display(Context c) {
+        Toast.makeText(c,Constants.BASE_URL, Toast.LENGTH_SHORT).show();
 
     }
 }
