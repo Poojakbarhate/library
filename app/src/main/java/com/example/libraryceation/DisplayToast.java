@@ -16,10 +16,10 @@ public class DisplayToast extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        display(DisplayToast.this);
-    }
-    public void display(Context c) {
-        Toast.makeText(c,Constants.BASE_URL, Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,Constants.BASE_URL, Toast.LENGTH_SHORT).show();
+        Toast toast=Toast.makeText(getApplicationContext(),Constants.BASE_URL,Toast.LENGTH_SHORT);
+        toast.show();
 
     }
 }
