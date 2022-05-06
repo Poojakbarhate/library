@@ -1,9 +1,16 @@
 plugins {
     id 'com.android.library'
 }
+def buildType
 
 android {
+   /* applicationVariants.all { variant ->
+        buildType = variant.buildType.pro // Sets the current build type
+    }
+
+    */
     compileSdk 31
+
 
     defaultConfig {
       //  applicationId "com.example.libraryceation"
@@ -11,23 +18,33 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        resValue "string","BASE_URL","this is release build"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
+//    defaultPublishConfig {"pro"}
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "COMMON_BASE_URL", '"relase build"'
+         //   buildConfigField "String", "COMMON_BASE_URL", '"relase build"'
 
         }
         PRO{
-            buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
-
+            initWith release
+           // buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
+        resValue "string","BASE_URL","this is pro build"
         }
         UAT{
-            buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
+            initWith release
+            //buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
+            resValue "string","BASE_URL","this is uat build"
+
+        }
+        debug{
+            initWith release
+            resValue "string","BASE_URL","this is uat build"
 
         }
     }
@@ -36,7 +53,50 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+/*
+task myTask{
+    if(tasks.n=='release'){
+        COMMON_BASE_URL="release build"
+          }
+    else if(buildInProgress=='debug'){
+        COMMON_BASE_URL="debug build"
+    }
+    else if(buildInProgress=='PRO'){
+        COMMON_BASE_URL="pro build"
+    }
+}
+*/
 
+/*String COMMON_BASE_URL="";
+tasks.whenTaskAdded  { Task task ->
+    if (task.name == "PRO") {
+        doFirst {
+            COMMON_BASE_URL="pro build"
+
+
+        }
+    } else if (task.name == "debug") {
+        doFirst {
+            COMMON_BASE_URL="debug build"
+        }
+    }
+}*/
+
+
+/*applicationVariants.all { variant ->
+
+    def BASE_URL = ""
+
+    if (variant.getName().contains("develop")) {
+        BASE_URL = "https://localhost:8080.com/"
+    } else if (variant.getName().contains("staging")) {
+        BASE_URL = "https://stagingdomain.com/"
+    } else if (variant.getName().contains("production")) {
+        BASE_URL = "https://productdomain.com/"
+    }
+    variant.buildConfigField "String", "BASE_URL", "\"${BASE_URL}\""
+
+}*/
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -45,4 +105,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
 }
