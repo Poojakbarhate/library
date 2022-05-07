@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class DisplayToast extends AppCompatActivity {
 
+    public static Context context;
    public static DisplayToast mInstance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +21,15 @@ public class DisplayToast extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public static DisplayToast getInstance()
-    {
-        if(mInstance==null)
-        mInstance=new DisplayToast();
-        return mInstance;
+
+    public DisplayToast(Context context) {
+        this.context=context;
     }
-    public static void display(Context c)
+
+    public static void display()
     {
-        Toast.makeText(c,getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(context,context.getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
         //Toast toast=Toast.makeText(c,,Toast.LENGTH_SHORT);
         //toast.show();
 
