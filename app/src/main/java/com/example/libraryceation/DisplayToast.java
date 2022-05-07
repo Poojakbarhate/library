@@ -2,6 +2,7 @@ package com.example.libraryceation;
 
 import static android.os.Build.VERSION_CODES.BASE;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.os.BuildCompat;
 
@@ -17,13 +18,12 @@ public class DisplayToast extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
     }
-    public static  void display(Context c)
+    public void display(Context c)
     {
-        Toast.makeText(c,Constants.BASE_URL, Toast.LENGTH_SHORT).show();
-        Toast toast=Toast.makeText(c,Constants.BASE_URL,Toast.LENGTH_SHORT);
-        toast.show();
+        Toast.makeText(c,getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
+        //Toast toast=Toast.makeText(c,,Toast.LENGTH_SHORT);
+        //toast.show();
 
     }
 }

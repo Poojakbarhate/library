@@ -33,12 +33,12 @@ android {
         PRO{
             initWith release
            // buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
-        //resValue "string","BASE_URL","this is pro build"
+        resValue "string","BASE_URL","this is pro build"
         }
         UAT{
             initWith release
             //buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
-          //  resValue "string","BASE_URL","this is uat build"
+            resValue "string","BASE_URL","this is uat build"
 
         }
     }
