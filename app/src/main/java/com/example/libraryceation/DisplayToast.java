@@ -13,11 +13,18 @@ import android.widget.Toast;
 
 public class DisplayToast extends AppCompatActivity {
 
+   public static DisplayToast mInstance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+    public static DisplayToast getInstance()
+    {
+        if(mInstance==null)
+        mInstance=new DisplayToast();
+        return mInstance;
     }
     public void display(Context c)
     {
