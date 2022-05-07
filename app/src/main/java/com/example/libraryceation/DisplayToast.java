@@ -26,7 +26,7 @@ public class DisplayToast extends AppCompatActivity {
         mInstance=new DisplayToast();
         return mInstance;
     }
-    public void display(Context c)
+    public static void display(Context c)
     {
         Toast.makeText(c,getResources().getString(R.string.BASE_URL), Toast.LENGTH_SHORT).show();
         //Toast toast=Toast.makeText(c,,Toast.LENGTH_SHORT);
