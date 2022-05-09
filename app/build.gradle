@@ -21,8 +21,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-        publishNonDefault true
+ //       publishNonDefault true
    // defaultPublishConfig {"PRO"}
+    defaultPublishConfig "UAT"
     buildTypes {
         release {
             minifyEnabled false
