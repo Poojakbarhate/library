@@ -22,7 +22,7 @@ android {
     }
 
 
-   // defaultPublishConfig {"pro"}
+    defaultPublishConfig {"PRO"}
     buildTypes {
         release {
             minifyEnabled false
@@ -34,7 +34,7 @@ android {
             initWith debug
            // buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
         resValue "string","BASE_URL","this is pro build"
-        }
+        }////
         UAT{
             initWith debug
             //buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
