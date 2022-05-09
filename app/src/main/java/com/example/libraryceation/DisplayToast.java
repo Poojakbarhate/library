@@ -32,12 +32,13 @@ public class DisplayToast extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      String buildType=  init(context);
-      display(buildType);
+ //     String buildType=  init(context);
+      display();
 
     }
 
-    public static void display(String buildType) {
+    public static void display() {
+        String buildType=init(context);
         switch (buildType) {
 
             case "UAT":
