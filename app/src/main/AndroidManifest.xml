@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LibraryCeation">-->
+      <meta-data android:name="BUILD_TYPE" android:value="${BUILD_TYPE}"/>
         <activity
             android:name=".DisplayToast"
             android:exported="true">

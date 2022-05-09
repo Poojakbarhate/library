@@ -1,13 +1,13 @@
 plugins {
     id 'com.android.library'
 }
-
+//def buildType
 android {
    /* applicationVariants.all { variant ->
-        buildType = variant.buildType.pro // Sets the current build type
-    }
+        buildType = variant.buildType.UAT // Sets the current build type
+    }*/
 
-    */
+
     compileSdk 31
 
 
@@ -17,8 +17,10 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-        resValue "string","BASE_URL","this is refhgkhgjhlease build"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        resValue "string","BASE_URL","this is refhgkhgjhlease build"
+
+        manifestPlaceholders=[BUILD_TYPE: "UAT"]
     }
 
  //       publishNonDefault true
@@ -32,22 +34,25 @@ android {
 
         }
         PRO{
-    //        initWith debug
+            initWith debug
            // buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
-        resValue "string","BASE_URL","this is pro build"
+       // resValue "string","BASE_URL","this is pro build"
         }////
         UAT{
-   //         initWith debug
+            initWith debug
             //buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
-            resValue "string","BASE_URL","this is uaaaaat build"
+         //   resValue "string","BASE_URL","this is uaaaaat build"
 
         }
+
     }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
+    }}
+
 /*
 task myTask{
     if(tasks.n=='release'){
@@ -61,8 +66,8 @@ task myTask{
     }
 }
 */
-
-/*String COMMON_BASE_URL="";
+/*
+String COMMON_BASE_URL="";
 tasks.whenTaskAdded  { Task task ->
     if (task.name == "PRO") {
         doFirst {
@@ -70,9 +75,9 @@ tasks.whenTaskAdded  { Task task ->
 
 
         }
-    } else if (task.name == "debug") {
+    } else if (task.name == "UAT") {
         doFirst {
-            COMMON_BASE_URL="debug build"
+            COMMON_BASE_URL="uat build"
         }
     }
 }*/
