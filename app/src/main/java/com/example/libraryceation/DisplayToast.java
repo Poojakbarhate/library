@@ -13,7 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class DisplayToast extends AppCompatActivity {
+public class DisplayToast extends AppCompatActivity implements Constants{
    public static Context context;
     public static String init(Context context) {
         try {
@@ -42,20 +42,20 @@ public class DisplayToast extends AppCompatActivity {
         switch (buildType) {
 
             case "UAT":
-                Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, UAT_BASE_URL, Toast.LENGTH_SHORT).show();
 
                 //  Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             case "PRO":
-                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, PRO_BASE_URL, Toast.LENGTH_SHORT).show();
 
 //                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             case "release":
-                Toast.makeText(context, Constants.RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             case "debug":
-                Toast.makeText(context, Constants.DEBUG_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, DEBUG_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             default:
                 Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();
