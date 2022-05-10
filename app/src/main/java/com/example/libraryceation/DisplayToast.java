@@ -42,10 +42,14 @@ public class DisplayToast extends AppCompatActivity {
         switch (buildType) {
 
             case "UAT":
-                Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, Constant.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
+
+                //  Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             case "PRO":
-                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, Constant.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
+
+//                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
                 break;
             case "release":
                 Toast.makeText(context, Constants.RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();

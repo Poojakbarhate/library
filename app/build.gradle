@@ -34,12 +34,12 @@ android {
 
         }
         PRO{
-            initWith debug
+            initWith release
            // buildConfigField "String", "COMMON_BASE_URL", '"pro build"'
        // resValue "string","BASE_URL","this is pro build"
         }////
         UAT{
-            initWith debug
+            initWith release
             //buildConfigField "String", "COMMON_BASE_URL", '"uat build"'
          //   resValue "string","BASE_URL","this is uaaaaat build"
 

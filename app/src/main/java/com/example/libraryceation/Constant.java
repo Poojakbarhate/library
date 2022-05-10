@@ -1,6 +1,6 @@
 package com.example.libraryceation;
 
-interface Constants {
+class Constant {
     public static String PRO_BASE_URL="this is PRO build";
     public static String UAT_BASE_URL="this is UAT build";
     public static String DEBUG_BASE_URL="this is DEBUG build";
