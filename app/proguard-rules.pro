@@ -18,5 +18,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--dontwarn class com.example.libraryceation.Constant.**
--keep class com.example.libraryceation.Constant.** { *;}
