@@ -18,4 +18,4 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep interface com.example.libraryceation.Constants {*;}
+-keep public interface com.example.libraryceation.** {*;}
