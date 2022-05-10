@@ -39,31 +39,10 @@ public class DisplayToast extends AppCompatActivity {
 
     public static void display() {
         String buildType=init(context);
-        switch (buildType) {
-
-            case "UAT":
-                Toast.makeText(context, Constant.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
-
-                //  Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
-                break;
-            case "PRO":
-                Toast.makeText(context, Constant.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
-
-//                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
-                break;
-            case "release":
-                Toast.makeText(context, Constants.RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();
-                break;
-            case "debug":
-                Toast.makeText(context, Constants.DEBUG_BASE_URL, Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();
-                break;
-
-
+        Constant constant=new Constant();
+    String data=        constant.getUrl(buildType);
+        Toast.makeText(context, data, Toast.LENGTH_SHORT).show();
         }
-    }
 
 }
 
