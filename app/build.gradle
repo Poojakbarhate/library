@@ -28,7 +28,7 @@ android {
   //  defaultPublishConfig "UAT"
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
          //   buildConfigField "String", "COMMON_BASE_URL", '"relase build"'
 
