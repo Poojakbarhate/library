@@ -18,4 +18,4 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keepclassmembernames class com.example.libraryceation.DisplayToast {public <methods>;}
+-keepclassmembers class * implements com.example.libraryceation.Constants
