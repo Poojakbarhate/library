@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LibraryCeation">-->
       <meta-data android:name="BUILD_TYPE" android:value="${BUILD_TYPE}"/>
-        <activity
+  <!--      <activity
             android:name=".DisplayToast"
             android:exported="true">
             <intent-filter>
@@ -18,7 +18,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
     </application>
 
 </manifest>

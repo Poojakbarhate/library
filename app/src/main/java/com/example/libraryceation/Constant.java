@@ -10,31 +10,29 @@ class Constant {
     public static String UAT_BASE_URL="this is UAT build";
     public static String DEBUG_BASE_URL="this is DEBUG build";
     public static String RELEASE_BASE_URL="this is RELEASE build";*/
-    protected  String getUrl(String buildType) {
+    public static void getUrl(String buildType) {
         switch (buildType) {
 
             case "UAT":
-                return "this is UAT build";
+                BASE_URL="this is UAT build";
 //            Toast.makeText(context, Constant.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
 
             //  Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
             case "PRO":
-                return "this is PRO build";
+                BASE_URL= "this is pro build";break;
             //    Toast.makeText(context, Constant.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
 
 //                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
          //   break;
             case "release":
-                return "this is PRO build";
+                BASE_URL= "this is release build";break;
             //Toast.makeText(context, Constants.RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();
            // break;
             case "debug":
-                return "this is PRO build";
+                BASE_URL= "this is debug build";break;
             //Toast.makeText(context, Constants.DEBUG_BASE_URL, Toast.LENGTH_SHORT).show();
             //break;
-            default:
-                return "nothing";
-//            Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();
+            //  Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();
             //break;
 
         }

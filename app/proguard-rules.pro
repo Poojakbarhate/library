@@ -12,13 +12,14 @@
 #   public *;
 #}
 
-# Uncomment this to preserve the line number information for
+# Uncomment this to preserve the line number information forgit init
+
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep class com.example.libraryceation.DisplayToast {*;}
--keepclassmembernames,allowobfuscation interface com.example.libraryceation.Constants{
+-keepclassmembernames,allowobfuscation class com.example.libraryceation.Constant{
 public <methods>;
 }

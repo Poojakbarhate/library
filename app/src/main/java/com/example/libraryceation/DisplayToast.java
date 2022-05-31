@@ -3,6 +3,9 @@ package com.example.libraryceation;
 import static android.os.Build.VERSION_CODES.BASE;
 
 
+import static com.example.libraryceation.Constant.BASE_URL;
+import static com.example.libraryceation.Constant.getUrl;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.os.BuildCompat;
 
@@ -38,8 +41,11 @@ public class DisplayToast extends AppCompatActivity implements Constants{
     }
 
     public static void display() {
+        Constant constant=new Constant();
         String buildType=init(context);
-        switch (buildType) {
+        getUrl(buildType);
+        Toast.makeText(context, BASE_URL, Toast.LENGTH_SHORT).show();
+        /*switch (buildType) {
 
             case "UAT":
                 Toast.makeText(context, UAT_BASE_URL, Toast.LENGTH_SHORT).show();
@@ -61,11 +67,11 @@ public class DisplayToast extends AppCompatActivity implements Constants{
                 Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();
                 break;
 
-
+*/
         }
     }
 
-}
+
 
   /*  public static void display() {
         String buildType=init(context);
