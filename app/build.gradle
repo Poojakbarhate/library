@@ -20,7 +20,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //        resValue "string","BASE_URL","this is refhgkhgjhlease build"
 
-        manifestPlaceholders=[BUILD_TYPE: "UAT"]
+        manifestPlaceholders=[BUILD_TYPE: "PRO"]
     }
 
  //       publishNonDefault true
