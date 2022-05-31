@@ -14,22 +14,22 @@ class Constant {
         switch (buildType) {
 
             case "UAT":
-                BASE_URL="this is UAT build";
+                BASE_URL="this is UAT build";break;
 //            Toast.makeText(context, Constant.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
 
             //  Toast.makeText(context, Constants.UAT_BASE_URL, Toast.LENGTH_SHORT).show();
             case "PRO":
-                BASE_URL= "this is pro build";break;
+                BASE_URL= "this is PRO build";break;
             //    Toast.makeText(context, Constant.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
 
 //                Toast.makeText(context, Constants.PRO_BASE_URL, Toast.LENGTH_SHORT).show();
          //   break;
             case "release":
-                BASE_URL= "this is release build";break;
+                BASE_URL= "this is RELEASE build";break;
             //Toast.makeText(context, Constants.RELEASE_BASE_URL, Toast.LENGTH_SHORT).show();
            // break;
             case "debug":
-                BASE_URL= "this is debug build";break;
+                BASE_URL= "this is DEBUG build";break;
             //Toast.makeText(context, Constants.DEBUG_BASE_URL, Toast.LENGTH_SHORT).show();
             //break;
             //  Toast.makeText(context, "no build type is selected", Toast.LENGTH_SHORT).show();

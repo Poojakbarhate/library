@@ -1,13 +1,13 @@
 package com.example.libraryceation;
 
-import static android.os.Build.VERSION_CODES.BASE;
+
 
 
 import static com.example.libraryceation.Constant.BASE_URL;
 import static com.example.libraryceation.Constant.getUrl;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.os.BuildCompat;
+
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -41,9 +41,8 @@ public class DisplayToast extends AppCompatActivity implements Constants{
     }
 
     public static void display() {
-        Constant constant=new Constant();
-        String buildType=init(context);
-        getUrl(buildType);
+         String buildType=init(context);
+         getUrl(buildType);
         Toast.makeText(context, BASE_URL, Toast.LENGTH_SHORT).show();
         /*switch (buildType) {
 

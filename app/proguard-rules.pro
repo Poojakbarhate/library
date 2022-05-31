@@ -20,6 +20,5 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep class com.example.libraryceation.DisplayToast {*;}
--keepclassmembernames,allowobfuscation class com.example.libraryceation.Constant{
-public <methods>;
+-keepclassmembernames,allowobfuscation class com.example.libraryceation.Constant{*;
 }
